@@ -1,0 +1,9 @@
+var lib = require('../lib/index.js')
+global.CreoleHeading = lib.CreoleHeading
+global.CreoleInline = lib.CreoleInline
+global.CreoleList = lib.CreoleList
+global.CreoleParser = lib.CreoleParser
+global.CreoleRuler = lib.CreoleRuler
+global.CreoleTable = lib.CreoleTable
+global.CreoleText = lib.CreoleText
+global.expect = require('chai').expect

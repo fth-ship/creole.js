@@ -1,0 +1,55 @@
+{
+  "name": "creole.js",
+  "version": "0.0.0",
+  "description": "Parser/preprocessor for the Creole wiki-dialect",
+  "scripts": {
+    "test": "jasmine-node --color --coffee test"
+  },
+  "keywords": [
+    "wiki",
+    "creole",
+    "html",
+    "wikipedia",
+    "web",
+    "parser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/caitp/creole.js.git"
+  },
+  "bugs": {
+    "url": "http://github.com/caitp/creole.js/issues",
+    "email": "snowball@defpixel.com"
+  },
+  "author": {
+    "name": "Caitlin Potter",
+    "email": "snowball@defpixel.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "jasmine-node": "~1.11.0",
+    "grunt": "~0.4.1",
+    "matchdep": "~0.1.2",
+    "mocha": "~1.12.0",
+    "grunt-coffeelint": "0.0.7",
+    "grunt-contrib-yuidoc": "~0.4.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-preprocess": "~3.0.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "karma-script-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-coffee-preprocessor": "~0.1.0",
+    "karma-requirejs": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma-mocha": "~0.1.0",
+    "karma": "~0.10.2",
+    "grunt-karma": "~0.6.1",
+    "karma-spec-reporter": "0.0.4",
+    "grunt-mocha-test": "~0.6.3",
+    "chai": "~1.7.2",
+    "karma-chai": "0.0.1"
+  }
+}
