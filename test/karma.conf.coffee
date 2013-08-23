@@ -20,7 +20,7 @@ module.exports = (config) ->
     
     # list of files / patterns to load in the browser
     files: [
-      "creole.js"
+      "creole.min.js"
       "test/spec/**/*.coffee"
     ]
     

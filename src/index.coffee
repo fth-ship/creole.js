@@ -34,3 +34,12 @@ module.exports = exports =
   CreoleTable: require('./table')
   CreoleText: require('./text')
 # @endif
+# @if BUILD_TYPE === 'browser'
+global.CreoleHeading = CreoleHeading
+global.CreoleInline = CreoleInline
+global.CreoleList = CreoleList
+global.CreoleParser = CreoleParser
+global.CreoleRuler = CreoleRuler
+global.CreoleTable = CreoleTable
+global.CreoleText = CreoleText
+# @endif

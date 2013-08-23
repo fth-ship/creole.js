@@ -15,7 +15,7 @@ module.exports = (grunt) ->
           reporter: 'spec'
           require: [
             'coffee-script'
-            './test/node.globals.js'
+            './test/node.globals.coffee'
           ]
         src: ['test/spec/**/*.coffee']
 
@@ -89,6 +89,7 @@ module.exports = (grunt) ->
             'build/browser/inline.coffee'
             'build/browser/ruler.coffee'
             'build/browser/parser.coffee'
+            'build/browser/index.coffee'
           ]
 
     # Copy
@@ -116,12 +117,6 @@ module.exports = (grunt) ->
           filter: 'isFile'
           expand: true
         ]
-      browser_install:
-        files: [
-          src: 'build/browser/index.js'
-          dest: 'creole.js'
-          expand: false
-        ]
 
     # Preprocessor
     preprocess:
@@ -140,6 +135,30 @@ module.exports = (grunt) ->
             BUILD_TYPE: 'browser'
           inline: true
         src: ['build/browser/*.coffee']
+
+    # Uglify
+    uglify:
+      options:
+        wrap: 'creole'
+        enclose: true
+        preserveComments: false
+        mangle: false
+        exportAll: false
+      mini:
+        options:
+          mangle: true
+        files:
+          'creole.min.js': ['build/browser/index.js']
+      browser:
+        options:
+          beautify:
+            indent_level: 2
+            beautify: true
+            max_line_len: 80
+            semicolons: false
+            preserve_line: true
+        files:
+          'creole.js': ['build/browser/index.js']
 
   # Default task.
   grunt.registerTask "default", ['coffeelint']
@@ -161,7 +180,7 @@ module.exports = (grunt) ->
       'copy:browser'
       'preprocess:browser'
       'coffee:browser'
-      'copy:browser_install'
+      'uglify'
       'karma:phantom'
       'yuidoc'
     ]

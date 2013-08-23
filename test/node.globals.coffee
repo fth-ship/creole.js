@@ -1,4 +1,4 @@
-var lib = require('../lib/index.js')
+lib = require('../lib/index.js')
 global.CreoleHeading = lib.CreoleHeading
 global.CreoleInline = lib.CreoleInline
 global.CreoleList = lib.CreoleList
